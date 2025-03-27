@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yogesh Dhole - SDET Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#4F46E5",
+            secondary: "#6366F1",
+          },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    .scroll-smooth {
+      scroll-behavior: smooth;
+    }
+
+    .nav-link.active {
+      color: #4f46e5;
+    }
+
+    .download-btn:hover .download-icon {
+      transform: translateY(2px);
+    }
+
+    .dark {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    .dark .bg-white {
+      background-color: #2a2a2a;
+    }
+
+    .dark .text-gray-900:not(#hero *) {
+      color: #fff;
+    }
+
+    .dark .text-gray-600 {
+      color: #9ca3af;
+    }
+
+    .dark .bg-gray-50 {
+      background-color: #1f1f1f;
+    }
+
+    .dark .border-gray-100 {
+      border-color: #333;
+    }
+
+    .dark .bg-gray-100 {
+      background-color: #333;
+    }
+
+    .dark .text-gray-500 {
+      color: #9ca3af;
+    }
+
+    .dark .border-gray-300 {
+      border-color: #4a4a4a;
+    }
+
+    .dark .bg-white\/90 {
+      background-color: rgba(42, 42, 42, 0.9);
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center space-x-4">
+          <a href="#hero" class="text-xl font-semibold text-gray-900">Yogesh Dhole</a>
+          <button id="themeToggle"
+            class="w-10 h-10 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+            <i class="ri-sun-line text-gray-600 dark:hidden"></i>
+            <i class="ri-moon-line text-white hidden dark:block"></i>
+          </button>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="nav-link text-gray-600 hover:text-primary transition-colors">About</a>
+          <a href="#skills" class="nav-link text-gray-600 hover:text-primary transition-colors">Skills</a>
+          <a href="#projects" class="nav-link text-gray-600 hover:text-primary transition-colors">Projects</a>
+          <a href="#awards" class="nav-link text-gray-600 hover:text-primary transition-colors">Awards</a>
+          <a href="#certifications"
+            class="nav-link text-gray-600 hover:text-primary transition-colors">Certifications</a>
+          <a href="#contact" class="nav-link text-gray-600 hover:text-primary transition-colors">Contact</a>
+          <button id="downloadResume"
+            class="download-btn flex items-center space-x-2 bg-primary text-white px-4 py-2 !rounded-button hover:bg-primary/90 transition-colors">
+            <i class="ri-file-download-line download-icon transition-transform duration-300"></i>
+            <span class="whitespace-nowrap">Download Resume</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-16">
+    <section id="hero" class="relative min-h-screen flex items-center" style="
+          background-image: url('https://public.readdy.ai/ai/img_res/743df9d2de902b49c6945b27a65539f4.jpg');
+          background-size: cover;
+          background-position: center;
+        ">
+      <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-bold text-gray-900 mb-6">
+            Software Development Engineer in Test
+          </h1>
+          <p class="text-xl text-gray-900 mb-8">
+            Specializing in test automation, CI/CD implementation, and quality
+            assurance with 3+ years of experience in enterprise software
+            testing.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#contact"
+              class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 transition-colors cursor-pointer">Get
+              in Touch</a>
+            <a href="#projects"
+              class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button hover:bg-gray-50 transition-colors cursor-pointer">View
+              Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+          About Me
+        </h2>
+        <div class="grid grid-cols-1 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+              Hi, I'm John Anderson
+            </h3>
+            <p class="text-gray-600 mb-6">
+              With over 3+ years of experience in software testing and quality
+              assurance, I've helped companies build robust testing frameworks
+              and implement efficient CI/CD pipelines. My expertise spans
+              across web, mobile, desktop, performance and API testing automation.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="text-3xl font-bold text-primary mb-2">800+</div>
+                <div class="text-gray-600">Test Cases Automated</div>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="text-3xl font-bold text-primary mb-2">7+</div>
+                <div class="text-gray-600">Projects Delivered</div>
+              </div>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://www.linkedin.com/in/yogesh-dhole/" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-600 transition-colors">
+                <i class="ri-linkedin-fill text-primary"></i>
+              </a>
+              <a href="https://github.com/ydhole-spurqlabs" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-600 transition-colors">
+                <i class="ri-github-fill text-primary"></i>
+              </a>
+              <a href="https://medium.com/@yogeshdhole" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-600 transition-colors">
+                <i class="ri-medium-fill text-primary"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+        Technical Skills
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+            <i class="ri-code-line text-xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Automation Frameworks
+          </h3>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-center">
+              <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+              Selenium/Playwright/Cypress
+            </li>
+            <li class="flex items-center">
+              <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+              Desktop
+            </li>
+            <li class="flex items-center">
+              <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+              Appium
+            </li>
+            <li class="flex items-center">
+              <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+              API
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+            <i class="ri-terminal-line text-xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Programming Languages
+          </h3>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-center">
+              <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+              Java
+            </li>
+            <li class="flex items-center">
+              <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+              Python
+            </li>
+            <li class="flex items-center">
+              <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+              JavaScript
+            </li>
+            <!-- <li class="flex items-center">
+                  <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                  TypeScript
+                </li> -->
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+            <i class="ri-tools-line text-xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Tools & Technologies
+          </h3>
+          <div class="grid grid-cols-2 gap-4">
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                Jmeter
+              </li>
+              <li class="flex items-center">
+                <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                Github/GitLab
+              </li>
+              <li class="flex items-center">
+                <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                Git/Bitbucket
+              </li>
+              <li class="flex items-center">
+                <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                JIRA/Azure
+              </li>
+            </ul>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                GitHub Actions
+              </li>
+              <li class="flex items-center">
+                <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                Postman
+              </li>
+              <li class="flex items-center">
+                <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                ZAP Proxy
+              </li>
+              <li class="flex items-center">
+                <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                BrowserStack
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <br />
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+        Recent Projects
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 cursor-pointer project-card"
+          data-project="0">
+          <img src="https://public.readdy.ai/ai/img_res/b32ff1ad253968a8fe82b2ccda52aa01.jpg"
+            class="w-full h-48 object-cover" alt="Project 1" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Ibeinni: Live Event Streaming Platform Solution
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Developed a comprehensive test automation framework for a
+              large-scale e-commerce platform using Selenium and TestNG.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Playwright</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">C#</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Specflow</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">AzureDevOps</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">JMeter</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">OWASP ZAP</span>
+            </div>
+            <a href="#" class="text-primary hover:text-primary/90 font-medium flex items-center view-details"
+              data-project="0">
+              View Details
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 cursor-pointer project-card"
+          data-project="1">
+          <img src="https://public.readdy.ai/ai/img_res/3fed2c740622b78ba1d9b19bb04946bb.jpg"
+            class="w-full h-48 object-cover" alt="Project 2" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Simplify i3®: Transforming Public Sector Efficiency
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Built an automated testing suite for iOS and Android
+              applications using Appium with cross-platform support.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Appium</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">C#</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Specflow</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Selenium</span>
+            </div>
+            <a href="#" class="text-primary hover:text-primary/90 font-medium flex items-center view-details"
+              data-project="1">
+              View Details
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 cursor-pointer project-card"
+          data-project="2">
+          <img src="https://public.readdy.ai/ai/img_res/a2728316757e788d543e35d71cdc8a75.jpg"
+            class="w-full h-48 object-cover" alt="Project 3" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              CloudPCR: EMS Trip-Sheet Charting Application
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Implemented automated testing within CI/CD pipeline using
+              Jenkins, Docker, and GitHub Actions.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">JavaScript</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Playwright</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">GitHub Actions</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Winium</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">OpenAI</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">BrowserStack</span>
+            </div>
+            <a href="#" class="text-primary hover:text-primary/90 font-medium flex items-center view-details"
+              data-project="2">
+              View Details
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg max-w-3xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-semibold text-gray-900" id="projectTitle"></h3>
+              <button class="close-project-modal text-gray-500 hover:text-gray-700">
+                <i class="ri-close-line text-2xl"></i>
+              </button>
+            </div>
+            <div class="prose max-w-none">
+              <div class="mb-6">
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                  Project Description
+                </h4>
+                <p id="projectDescription" class="text-gray-600"></p>
+              </div>
+              <div class="mb-6">
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                  Key Responsibilities
+                </h4>
+                <ul id="projectResponsibilities" class="list-disc list-inside text-gray-600"></ul>
+              </div>
+              <div class="mb-6">
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                  Technologies Used
+                </h4>
+                <div id="projectTechnologies" class="flex flex-wrap gap-2"></div>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                  Key Achievements
+                </h4>
+                <ul id="projectAchievements" class="list-disc list-inside text-gray-600"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        const projects = [
+          {
+            "title": "Ibeinni: Live Event Streaming Platform Solution",
+            "description": "Developed and implemented a robust test automation framework for a live event streaming platform catering to sports teams, concert organizers, and various companies. The platform enables seamless live streaming of events through a user-friendly website, featuring a secure pay-per-view service that enhances revenue opportunities for event organizers.",
+            "responsibilities": [
+              "Architected and developed the core test automation framework from scratch",
+              "Implemented Page Object Model design pattern for better maintainability",
+              "Created reusable test components and utilities",
+              "Integrated with CI/CD pipeline for continuous testing",
+              "Set up detailed test reporting and analytics",
+              "Mentored team members on framework usage and best practices"
+            ],
+            "technologies": [
+              "Playwright",
+              "C#",
+              "SpecFlow",
+              "JMeter",
+              "BlazeMeter",
+              "OWASP ZAP",
+              "Azure DevOps"
+            ],
+            "achievements": [
+              "Reduced test execution time by 50% through parallel execution",
+              "Achieved 90% test automation coverage",
+              "Decreased manual testing effort by 70%",
+              "Improved defect detection rate by 70% through comprehensive automated testing"
+            ]
+          },
+          {
+            "title": "Simplify i3®: Digital Transformation Platform",
+            "description": "Developed and implemented a scalable and secure digital transformation platform designed for public works, utilities, and government agencies. The platform simplifies the management of diverse data sources and multiple software systems, addressing challenges such as tight budgets, IT resource limitations, and staff availability to facilitate effective digital transformation.",
+            "responsibilities": [
+              "Architected and developed the test automation framework for the platform",
+              "Implemented Behavior-Driven Development (BDD) practices using SpecFlow",
+              "Created automated test scripts for functional and regression testing",
+              "Conducted manual testing to validate user interfaces and ensure a seamless user experience",
+              "Integrated automated tests into the CI/CD pipeline for continuous delivery",
+              "Collaborated with cross-functional teams to gather requirements and enhance user experience"
+            ],
+            "technologies": [
+              "Appium (iOS, Android)",
+              "SpecFlow",
+              "C#",
+              "LivingDoc",
+              "Selenium"
+            ],
+            "achievements": [
+              "Achieved 85% test automation coverage for critical functionalities",
+              "Reduced testing time by 50% through the implementation of automated testing",
+              "Improved defect detection rate by 60% with early testing in the development cycle",
+              "Enhanced platform stability, achieving 99% uptime during peak usage",
+              "Successfully identified and reported critical usability issues through manual testing, leading to improved user satisfaction"
+            ]
+          },
+          {
+            "title": "CloudPCR: EMS Trip-Sheet Charting Application",
+            "description": "Developed and implemented the fastest and most intuitive EMS trip-sheet charting application for logging electronic patient data across various devices, including Toughbooks, PCs, Macs, smartphones, and tablets. The platform features seamless cloud syncing to ensure patient data is never lost, even when offline. With user-friendly design and advanced features like Google geo-locating, automatic clocking, responsive form adaptation, and integrated talk-to-type functionality, it reduces charting times by up to 70%.",
+            "responsibilities": [
+              "Architected and developed the core application for logging electronic patient data",
+              "Implemented automated testing frameworks using Playwright and Winium for desktop automation",
+              "Utilized Open AI to generate summaries of ePCRs and automate the uploading of generated ePCR files to Google Drive",
+              "Set up CI/CD pipeline using GitHub Actions for continuous integration and deployment",
+              "Monitored page response times and optimized performance",
+              "Inserted data into MongoDB database for efficient data management"
+            ],
+            "technologies": [
+              "JavaScript",
+              "Playwright",
+              "Cucumber",
+              "BrowserStack",
+              "GitHub",
+              "GitHub Actions (CI/CD)",
+              "Open AI",
+              "Winium",
+              "MongoDB"
+            ],
+            "achievements": [
+              "Reduced charting times by 70% through intuitive design and automation",
+              "Achieved 90% test automation coverage for critical functionalities",
+              "Improved application performance with an average page response time of under 2 seconds",
+              "Successfully integrated automated file uploads to Google Drive, enhancing data accessibility"
+            ]
+          },
+        ];
+        document.addEventListener("DOMContentLoaded", function () {
+          const modal = document.getElementById("projectModal");
+          const modalTitle = document.getElementById("projectTitle");
+          const modalImage = document.getElementById("projectImage");
+          const modalDescription = document.getElementById("projectDescription");
+          const modalResponsibilities = document.getElementById(
+            "projectResponsibilities",
+          );
+          const modalTechnologies = document.getElementById("projectTechnologies");
+          const modalAchievements = document.getElementById("projectAchievements");
+          function openProjectModal(projectIndex) {
+            const project = projects[projectIndex];
+            modalTitle.textContent = project.title;
+            modalDescription.textContent = project.description;
+            modalResponsibilities.innerHTML = project.responsibilities
+              .map((resp) => `<li>${resp}</li>`)
+              .join("");
+            modalTechnologies.innerHTML = project.technologies
+              .map(
+                (tech) =>
+                  `<span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">${tech}</span>`,
+              )
+              .join("");
+            modalAchievements.innerHTML = project.achievements
+              .map((achievement) => `<li>${achievement}</li>`)
+              .join("");
+            modal.classList.remove("hidden");
+          }
+          document
+            .querySelectorAll(".project-card, .view-details")
+            .forEach((element) => {
+              element.addEventListener("click", (e) => {
+                e.preventDefault();
+                const projectIndex = element.getAttribute("data-project");
+                openProjectModal(projectIndex);
+              });
+            });
+          document
+            .querySelector(".close-project-modal")
+            .addEventListener("click", () => {
+              modal.classList.add("hidden");
+            });
+          modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+              modal.classList.add("hidden");
+            }
+          });
+        });
+      </script>
+    </div>
+    </section>
+    <section id="awards" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+          Awards & Recognition
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="award-card group cursor-pointer bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <img
+              src="https://public.readdy.ai/ai/img_res/b8535a4a128f41e71513234aea00ed83.jpg"
+              alt="Quality Crusaders Award" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Quality Crusaders
+              </h3>
+              <p class="text-gray-600">InnoVortex 2025</p>
+            </div>
+          </div>
+          <div
+            class="award-card group cursor-pointer bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <img
+              src="https://public.readdy.ai/ai/img_res/8c9df101bba78c7ab75022a1c8c31d37.jpg"
+              alt="Leadership Excellence Award" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Leadership Excellence
+              </h3>
+              <p class="text-gray-600">InnoVortex 2025</p>
+            </div>
+          </div>
+          <div
+            class="award-card group cursor-pointer bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <img
+              src="https://public.readdy.ai/ai/img_res/fbbe1b810908a38c01767d007ba354e0.jpg"
+              alt="Ace of Initiatives Award" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Ace of Initiatives
+              </h3>
+              <p class="text-gray-600">InnoVortex 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <section id="certifications" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+          Certifications
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+              <i class="ri-award-line text-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              ISTQB (CTFL) ISTQB®
+            </h3>
+            <p class="text-gray-600 mb-4">
+              International Software Testing Qualifications Board
+            </p>
+            <div class="text-sm text-gray-500">Issued Sep 2022</div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+              <i class="ri-award-line text-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Scrum Fundamentals Certified (SFC)
+            </h3>
+            <p class="text-gray-600 mb-4">CertiProf</p>
+            <div class="text-sm text-gray-500">Issued Jan 2023</div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+              <i class="ri-award-line text-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              HIPAA Certificate
+            </h3>
+            <p class="text-gray-600 mb-4">Accountable HQ</p>
+            <div class="text-sm text-gray-500">
+              Issued Nov 2024
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Get in Touch
+        </h2>
+        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+          Have a question, project idea, or just want to say hello? Let's
+          connect! Drop me a message below, and I'll get back to you as soon
+          as possible.
+        </p>
+        <div class="max-w-2xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex items-center">
+              <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mr-4">
+                <i class="ri-phone-line text-xl text-primary"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                  Phone
+                </h3>
+                <a href="tel:+91 7498724262" class="text-gray-600 hover:text-primary transition-colors">+91 7498724262</a>
+              </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex items-center">
+              <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mr-4">
+                <i class="ri-mail-line text-xl text-primary"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                  Email
+                </h3>
+                <a href="mailto:yogesh.dholep@gmail.com"
+                  class="text-gray-600 hover:text-primary transition-colors">yogesh.dholep@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Yogesh Dhole</h3>
+          <p class="text-gray-400">
+            Software Development Engineer in Test specializing in test
+            automation and quality assurance.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a>
+            </li>
+            <li>
+              <a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a>
+            </li>
+            <li>
+              <a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+            </li>
+            <li>
+              <a href="#awards" class="text-gray-400 hover:text-white transition-colors">Awards</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Connect</h3>
+          <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/in/yogesh-dhole/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="ri-linkedin-fill text-xl"></i>
+            </a>
+            <a href="https://github.com/ydhole-spurqlabs" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="ri-github-fill text-xl"></i>
+            </a>
+            <a href="https://medium.com/@yogeshdhole" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="ri-medium-fill text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Yogesh Dhole. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <div id="notification"
+    class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-full opacity-0 transition-all duration-300 hidden">
+    Message sent successfully!
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll('.nav-link, a[href^="#"]');
+      const sections = document.querySelectorAll("section");
+      const notification = document.getElementById("notification");
+      const themeToggle = document.getElementById("themeToggle");
+      function toggleTheme() {
+        document.documentElement.classList.toggle("dark");
+        localStorage.setItem(
+          "theme",
+          document.documentElement.classList.contains("dark")
+            ? "dark"
+            : "light"
+        );
+      }
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      themeToggle.addEventListener("click", toggleTheme);
+      function showNotification(message) {
+        notification.textContent = message;
+        notification.classList.remove("hidden");
+        setTimeout(() => {
+          notification.classList.remove("translate-y-full", "opacity-0");
+        }, 100);
+        setTimeout(() => {
+          notification.classList.add("translate-y-full", "opacity-0");
+          setTimeout(() => {
+            notification.classList.add("hidden");
+          }, 300);
+        }, 3000);
+      }
+      document
+        .getElementById("downloadResume")
+        .addEventListener("click", function () {
+          window.open(
+            "https://drive.google.com/drive/folders/1E9hGYvazYWx6wbNd3zOJuwK_eR9gW_5r",
+            "_blank",
+          );
+          showNotification("Resume download started...");
+        });
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+          };
+          fetch("https://formspree.io/f/xdoqzwrw", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          })
+            .then((response) => {
+              if (response.ok) {
+                showNotification("Message sent successfully!");
+                this.reset();
+              } else {
+                showNotification("Failed to send message. Please try again.");
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              showNotification("Failed to send message. Please try again.");
+            });
+        });
+      function updateActiveLink() {
+        const scrollPosition = window.scrollY;
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionBottom
+          ) {
+            const currentId = section.getAttribute("id");
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === `#${currentId}`) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      }
+      window.addEventListener("scroll", updateActiveLink);
+      updateActiveLink();
+      navLinks.forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const offset = 80;
+            const targetPosition = targetElement.offsetTop - offset;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
